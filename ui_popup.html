@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Tracker Dashboard</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 20px;
+            background-color: #f0f2f5;
+            color: #333;
+        }
+        .container {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .header {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .stats-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .stats-box {
+            flex-basis: 48%;
+            padding: 10px;
+            background: #e7e9ed;
+            border-radius: 5px;
+        }
+        .stats-box strong {
+            display: block;
+            font-size: 20px;
+            color: #555;
+        }
+        .action-buttons {
+            text-align: right;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Screen Time Summary</div>
+        <div class="stats-row">
+            <div class="stats-box">
+                <div>Total Time Spent:</div>
+                <strong id="totalTime">0h 0m</strong>
+            </div>
+            <div class="stats-box">
+                <div>Most Visited Site:</div>
+                <strong id="mostVisited">N/A</strong>
+            </div>
+        </div>
+        <div class="action-buttons">
+            <button id="refreshData">Refresh Data</button>
+            <button id="exportData">Export Data</button>
+            <button id="clearData">Clear Data</button>
+        </div>
+    </div>
+    <script src="dashboard.js"></script>
+</body>
+</html>

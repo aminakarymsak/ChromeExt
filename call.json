@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "ScreenTime",
+  "version": "1.1",
+  "description": "notifies you every 25 minutes",
+  "short_name": "screentime",
+  "permissions": ["tabs", "storage", "notifications", "background"],
+  "background": {
+    "service_worker": "bg_worker.js"
+  },
+  "action": {
+    "default_popup": "ui_popup.html",
+    "default_icon": {
+      "16": "icons/eye16.png",
+      "48": "icons/eye48.png",
+      "128": "icons/eye128.png"
+    }
+  }
+}
